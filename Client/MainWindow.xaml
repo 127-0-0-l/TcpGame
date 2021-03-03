@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
         <Grid x:Name="grdHeader"
               Margin="0"
-              Background="#FF4D606E">
+              Background="#FF4D606E" MouseDown="grdHeader_MouseDown">
             <Image Width="30"
                    Height="30"
                    HorizontalAlignment="Left"
@@ -64,8 +64,8 @@
         <Grid x:Name="grdMap"
               Margin="10"
               Grid.Row="1"
-              Background="#FF374045"
-              IsEnabled="False"/>
+              Background="#475055"
+              IsEnabled="False" Width="239" Height="239"/>
         <TextBox x:Name="tbIP"
                  HorizontalAlignment="Left"
                  Height="24"

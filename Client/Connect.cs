@@ -68,7 +68,41 @@ namespace Client
                         EnableMap();
                         break;
                     default:
-                        ChangeLineColor(s);
+                        Dispatcher.Invoke(() =>
+                        {
+                            PlayerColor plColor = playerColor == PlayerColor.Blue ? PlayerColor.Red : PlayerColor.Blue;
+                            bool isVertical = s[0] == 'v';
+
+                            PaintLine(
+                                isVertical,
+                                int.Parse(s[1].ToString()),
+                                int.Parse(s[2].ToString()),
+                                plColor
+                            );
+                            IncrementSquareTag(
+                                int.Parse(s[1].ToString()),
+                                int.Parse(s[2].ToString()),
+                                plColor
+                            );
+
+                            if (isVertical)
+                            {
+                                IncrementSquareTag(
+                                    int.Parse(s[1].ToString()) + 1,
+                                    int.Parse(s[2].ToString()),
+                                    plColor
+                                );
+                            }
+                            else
+                            {
+                                IncrementSquareTag(
+                                    int.Parse(s[1].ToString()),
+                                    int.Parse(s[2].ToString()) + 1,
+                                    plColor
+                                );
+                            }
+                            EnableMap();
+                        });
                         break;
                 }
             }
