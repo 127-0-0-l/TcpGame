@@ -20,6 +20,7 @@ namespace Client
             {
                 Connect(IPAddress.Parse(tbIP.Text));
                 rctConnectIndicator.Fill = colorIndicatorGreen;
+                grdConnect.IsEnabled = false;
             }
             catch(Exception ex)
             {

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="432"
+        Height="380"
         Width="332"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -16,7 +16,7 @@
           Background="#FFD5D5D5">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="332"/>
+            <RowDefinition Height="280"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid x:Name="grdHeader"
